@@ -389,7 +389,7 @@ const char* object_generator::get_key(int iter, unsigned int *len)
 
     // format key
     l = snprintf(m_key_buffer, sizeof(m_key_buffer)-1,
-        "%s%llu", m_key_prefix, m_key_index);
+        "%s%012llu", m_key_prefix, m_key_index);
     if (len != NULL) *len = l;
 
     return m_key_buffer;
